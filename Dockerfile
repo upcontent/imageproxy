@@ -1,8 +1,6 @@
 FROM golang:1.22 as build
 MAINTAINER Will Norris <will@willnorris.com>
 
-RUN apk update && apk add build-base git openssh go-1.21
-
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
